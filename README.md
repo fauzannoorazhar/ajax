@@ -1,3 +1,0 @@
-# Ajax-basic
-
-wkwkwkwk :v
