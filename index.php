@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php 
+
+require_once 'api/db.php';
+
+try {
+	$result = $db->query('select * from anggota');
+} catch (Exception $e) {
+	echo $e->getMessage();
+	die();
+}
+
+$anggota = $result->fetchAll(PDO::FETCH_ASSOC);
+
+/*echo json_encode($anggota);
+die();*/
+
+?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -9,6 +25,10 @@
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
 	<!-- <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css"> -->		
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="/js/jquery-3.3.1.min.js"></script>
+	<script src="/js/pace.js"></script>
+	<script src="/js/widget.js"></script>
 
 </head>
 <body>
@@ -24,20 +44,23 @@
 					</div>
 
 					<div class="box-body">
-						<div id="signup">
-							<form method="post" action="/signup">
-								<div class="form-group">
-									<label for="exampleInputEmail1">Email address</label>
-										<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-								</div>
-								<div class="form-group">
-									<label for="exampleInputPassword1">Password</label>
-										<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-								</div>
-								<button type="submit" class="btn btn-primary">Submit</button>
-							</form>
+						<div id="formHere">
 						</div>
+
+						<div>&nbsp;</div>
+
+						<table class="table table-stripped table-bordered table-consended table-hover">
+							<thead>
+								<tr>
+									<th class="text-center" width="50px">No</th>
+									<th class="text-center">Nama</th>
+									<th class="text-center">Email</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+
 					</div>
 				</div>
 			</div>
@@ -48,6 +71,3 @@
 	</div>
 </body>
 </html>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="assets/js/widget.js"></script>
