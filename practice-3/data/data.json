@@ -1,0 +1,44 @@
+[
+	{
+		"nama": "muhammad fauzan noor azhar",
+		"hp": "0897086086097",
+		"email": "fauzannoor98@gmail.com",
+		"status": true
+	},
+	{
+		"nama": "dadan satria",
+		"hp": "097097097097",
+		"email": "dadasatria@gmail.com",
+		"status": false
+	},
+	{
+		"nama": "iqbal hamsyah",
+		"hp": "070970980980",
+		"email": "iqbalhamsyah@gmail.com",
+		"status": true
+	},
+	{
+		"nama": "indra hendriansyah",
+		"hp": "08709809070",
+		"email": "hendriansyahindra@gmail.com",
+		"status": true
+	},
+	{
+		"nama": "agil abdurochman",
+		"hp": "09090980980",
+		"email": "abdurochmanagil@gmail.com",
+		"status": false
+	},
+	{
+		"nama": "yayan firdaus",
+		"hp": "0897086086097",
+		"email": "yayanfirdaus@gmail.com",
+		"status": true
+	},
+	{
+		"nama": "aldi otong renaldi",
+		"hp": "0897086086097",
+		"email": "aldirenaldi@gmail.com",
+		"status": false
+	}
+]
