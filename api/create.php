@@ -8,11 +8,11 @@ $sql = "INSERT INTO anggota (nama,email) VALUES ('".$post['nama']."','".$post['e
 
 $db->exec($sql);
 
-$result = $db->query("SELECT * FROM anggota Order by id desc LIMIT 1");
+$result = $db->query("SELECT * FROM anggota ORDER BY id DESC LIMIT 1");
 
-$data = $result->fetchAll(PDO::FETCH_ASSOC);
+$row = $result->fetchAll(PDO::FETCH_ASSOC);
 
-//echo json_encode($data);
-header("location: ../index.php");
+echo json_encode($row);
+//header("location: ../index.php");
 
 ?>
